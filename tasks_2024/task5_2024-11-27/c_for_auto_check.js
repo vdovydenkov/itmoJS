@@ -6,14 +6,13 @@
 // Не используйте console.log
 
 function task(x) {
-    if (x === null) { return 456778; }
-    x = Object.getPrototypeOf(x);
+    if (x === null) { return 465778; }
     let counter = 0;
     while (x !== null) {
-        counter += 1;
+        counter++;
         x = Object.getPrototypeOf(x);
     }
-    return counter;
+    return counter - 1;
 }
 
 const pro1 = { a: 1};

@@ -4,6 +4,10 @@ const req = await fetch('https://www.worldtimeserver.com/current_time_in_RU-SPE.
 const text = await req.text();
 // Извлекаем время из строки по шаблону
 const time = text.match(/\b\d{2}:\d{2}:\d{2}\b/);
+//  /\b\d{2}:\d{2}:\d{2}\b/
+// поиск с тегом /<\w[^<]*\d:\d\d/
+// А если мы хотим уточнить само имя тега, то можно дополнительно уточнить:
+// /<\w* /
 
 // Если нашлось - выводим
 if (time) {

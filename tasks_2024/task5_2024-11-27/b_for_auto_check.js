@@ -4,12 +4,16 @@
 // вашему номеру в ИСУ. Кроме того, в прототипе должен быть метод getFullName,
 // который возвращает результат конкатенации name, familyname и восклицательного знака.
 
-function Task(name, familyname, login = '465778') {
+function task(name, familyname, login = '465778') {
     this.name = name;
     this.familyname = familyname;
     this.login = login;
+    return;
 }
 
-Task.prototype.getFullName = function() {
-    return `${this.name} ${this.familyname}!`;
-};
+task.prototype.getFullName = function() {
+    return this.name + this.familyname + '!';
+}
+
+const obj = new task('Vladimir', 'Dovydenkov');
+console.log(obj.getFullName());
